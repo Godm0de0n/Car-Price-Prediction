@@ -1,59 +1,68 @@
-# Car Price Prediction
+# 🚗 Car Price Prediction
 
 ## 📌 Project Overview
-This project predicts car prices based on various attributes using machine learning techniques. The dataset consists of multiple car features, and the model estimates the price based on these attributes.
-
-## ✨ Features
-✔ Data preprocessing and cleaning  
-✔ Exploratory Data Analysis (EDA)  
-✔ Feature engineering and selection  
-✔ Model training and evaluation  
-✔ Performance metrics and visualization  
-
-## 🛠 Technologies Used
-🔹 Python  
-🔹 Jupyter Notebook  
-🔹 Pandas, NumPy  
-🔹 Scikit-Learn  
-🔹 Matplotlib, Seaborn  
-
-## 🚀 Installation
-1️⃣ Clone the repository:
-   ```bash
-   git clone <repository_url>
-   ```
-2️⃣ Navigate to the project directory:
-   ```bash
-   cd Car_Price_Prediction
-   ```
-3️⃣ Install required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-## 📖 Usage
-1️⃣ Open Jupyter Notebook:
-   ```bash
-   jupyter notebook
-   ```
-2️⃣ Run `Car_Price_Prediction.ipynb` step by step.
+This project focuses on predicting car prices based on various attributes using machine learning techniques. The dataset contains multiple car features that influence pricing, which are used to train a regression model.
 
 ## 📊 Dataset
-Ensure the dataset is placed in the appropriate directory before running the notebook.
+The dataset contains multiple features, including:
+- **🚘 Make & Model**
+- **📅 Year of Manufacture**
+- **🔧 Engine Size**
+- **⚡ Horsepower**
+- **⛽ Mileage**
+- **🛢 Fuel Type**
+- **⚙️ Transmission Type**
+- **💰 Price (Target Variable)**
+
+## 🛠 Dependencies
+The following Python libraries are required to run the notebook:
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+```
+
+## 🚀 Installation
+Ensure you have Python installed along with the required libraries. You can install them using:
+```sh
+pip install numpy pandas scikit-learn matplotlib seaborn
+```
+
+## 🔄 Data Processing
+1️⃣ Load the dataset using Pandas.  
+2️⃣ Perform data cleaning by handling missing values.  
+3️⃣ Normalize or scale features if needed.  
+4️⃣ Split the dataset into training and testing sets.  
+
+## 🏎️ Model Training
+- The **Random Forest Regressor** model is used for price prediction.
+- The dataset is split into **training (80%) and testing (20%)** sets.
+- The model is trained on the training dataset.
 
 ## 📈 Model Evaluation
-The model is evaluated based on:
-✔ Mean Absolute Error (MAE)  
-✔ Mean Squared Error (MSE)  
-✔ R-squared Score (R²)  
+- The performance of the trained model is evaluated using:
+  - **📉 Mean Absolute Error (MAE)**
+  - **📊 Mean Squared Error (MSE)**
+  - **📈 R-squared Score (R²)**
+- The evaluation metrics are printed as output.
 
-## 🔥 Future Improvements
-🔹 Enhance feature selection  
-🔹 Experiment with deep learning models  
-🔹 Deploy the model as a web application  
+## ▶️ How to Run
+1️⃣ Open the `Car_Price_Prediction.ipynb` file in **Jupyter Notebook** or **Google Colab**.  
+2️⃣ Execute the cells sequentially to process the data and train the model.  
+3️⃣ Observe the performance metrics of the model.  
 
-## Contribution
-Feel free to contribute by opening an issue or submitting a pull request.
+## 🔥 Future Enhancements
+- Implement **additional machine learning models** (e.g., **Linear Regression, XGBoost**) for comparison.  
+- Improve **feature engineering** for better predictions.  
+- Tune **hyperparameters** for better accuracy.  
+- Deploy the model as a **web application** for user interaction.  
 
-## License
-This project is licensed under the MIT License.
+## 🤝 Contribution
+Feel free to contribute by **opening an issue** or **submitting a pull request**.  
+
+## 📜 License
+This project is licensed under the **MIT License**.
